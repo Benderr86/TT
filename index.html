@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Workout Logger (Offline)</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- MSAL Browser (nur für den Export genutzt) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@azure/msal-browser@3.15.0/lib/msal-browser.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Workout Logger</h1>
+    <div class="session-meta">
+      <label>Datum
+        <input type="date" id="sessionDate" />
+      </label>
+      <label>Notizen
+        <input type="text" id="sessionNotes" placeholder="z. B. Fokus: Kniebeuge" />
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <section class="add-exercise">
+      <input id="exerciseName" type="text" placeholder="Übung (z. B. Kniebeuge)" />
+      <button id="addExerciseBtn">Übung hinzufügen</button>
+    </section>
+
+    <section id="exercises"></section>
+  </main>
+
+  <footer>
+    <div class="actions">
+      <button id="saveLocalBtn" class="secondary">Lokal sichern</button>
+      <button id="finishSessionBtn">Training abschließen</button>
+      <button id="exportBtn">Backup nach OneDrive exportieren</button>
+    </div>
+    <div class="hints">
+      <span id="exportHint"></span>
+    </div>
+    <div id="status"></div>
+  </footer>
+</body>
+</html>
