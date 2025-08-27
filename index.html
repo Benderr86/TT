@@ -8,6 +8,24 @@
   <!-- MSAL Browser (nur für den Export genutzt) -->
   <script defer src="https://cdn.jsdelivr.net/npm/@azure/msal-browser@3.15.0/lib/msal-browser.min.js"></script>
   <script defer src="app.js"></script>
+  <style>
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+      padding: 1rem;
+    }
+    label, select, input {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    select, input {
+      padding: 0.5rem;
+      box-sizing: border-box;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -23,12 +41,66 @@
   </header>
 
   <main>
-    <section class="add-exercise">
-      <input id="exerciseName" type="text" placeholder="Übung (z. B. Kniebeuge)" />
-      <button id="addExerciseBtn">Übung hinzufügen</button>
-    </section>
+    
 
-    <section id="exercises"></section>
+  <!-- Übungsauswahl -->
+  <label for="exercise">Übung auswählen:</label>
+  <select id="exercise" name="exercise">
+    <option value="">-- Bitte wählen --</option>
+    <option value="liegestuetze">Liegestütze</option>
+    <option value="kniebeugen">Kniebeugen</option>
+    <option value="klimmzuege">Klimmzüge</option>
+    <option value="plank">Plank</option>
+    <option value="burpees">Burpees</option>
+    <option value="mountain-climbers">Mountain Climbers</option>
+    <option value="crunches">Crunches</option>
+    <option value="ausfallschritte">Ausfallschritte</option>
+    <option value="dips">Dips</option>
+    <option value="beinpresse">Beinpresse</option>
+    <option value="bankdruecken">Bankdrücken</option>
+    <option value="schraegbankdruecken">Schrägbankdrücken</option>
+    <option value="rudern">Rudern</option>
+    <option value="latziehen">Latziehen</option>
+    <option value="seitheben">Seitheben</option>
+    <option value="frontheben">Frontheben</option>
+    <option value="bizepscurls">Bizepscurls</option>
+    <option value="trizepsdruecken">Trizepsdrücken</option>
+    <option value="beincurls">Beincurls</option>
+    <option value="waadenheben">Wadenheben</option>
+    <option value="hip-thrusts">Hip Thrusts</option>
+    <option value="glute-bridge">Glute Bridge</option>
+    <option value="donkey-kicks">Donkey Kicks</option>
+    <option value="side-plank">Side Plank</option>
+    <option value="russian-twist">Russian Twist</option>
+    <option value="hollow-hold">Hollow Hold</option>
+    <option value="superman">Superman</option>
+    <option value="bird-dog">Bird Dog</option>
+    <option value="good-mornings">Good Mornings</option>
+    <option value="face-pulls">Face Pulls</option>
+    <option value="farmer-walk">Farmer’s Walk</option>
+    <option value="jump-squats">Jump Squats</option>
+    <option value="box-jumps">Box Jumps</option>
+    <option value="step-ups">Step-Ups</option>
+    <option value="sprints">Sprints</option>
+    <option value="high-knees">High Knees</option>
+    <option value="butt-kicks">Butt Kicks</option>
+    <option value="skater-jumps">Skater Jumps</option>
+    <option value="lunges-reverse">Reverse Lunges</option>
+    <option value="pistol-squats">Pistol Squats</option>
+    <option value="wall-sit">Wall Sit</option>
+    <option value="hanging-leg-raises">Hanging Leg Raises</option>
+    <option value="toes-to-bar">Toes to Bar</option>
+    <option value="rope-jump">Seilspringen</option>
+    <option value="battle-ropes">Battle Ropes</option>
+    <option value="kettlebell-swings">Kettlebell Swings</option>
+    <option value="turkish-get-up">Turkish Get-Up</option>
+    <option value="medicine-ball-slams">Medicine Ball Slams</option>
+    <option value="burpee-pullups">Burpee Pull-Ups</option>
+  </select>
+
+  <!-- Freie Eingabe -->
+  <label for="custom-exercise">Eigene Übung eingeben:</label>
+  <input type="text" id="custom-exercise" name="custom-exercise" placeholder="z. B. Handstand">
   </main>
 
   <footer>
