@@ -10,7 +10,7 @@
 
 * { box-sizing: border-box; }
 body {
-  margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  max-width: 100%; overflow-x: hidden; margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   background: linear-gradient(180deg,#0b1220,#0f172a 30%,#0b1220 100%);
   color: var(--text);
 }
